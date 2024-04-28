@@ -1,0 +1,21 @@
+.header
+{
+  background-color: rgb(133, 193, 241);
+  width:70%;
+  height:100px;
+  
+}
+
+.content
+{
+    background-color: aqua;
+    width: 70%;
+    height: 400px;
+}
+
+.content2
+{
+    background-color: rgb(5, 235, 44);
+    width: 70%;
+    height: 300px;
+}

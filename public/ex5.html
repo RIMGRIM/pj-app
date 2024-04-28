@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web App</title>
+</head>
+<body>
+    <!-- 这里是您的页面内容 -->
+  
+    <!-- 加载 React、ReactDOM 和 Header.js -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="public/bundle.js"></script>
+    <script src="Header.js"></script>
+  
+    <!-- 在页面加载完成后执行渲染操作 -->
+    <script>
+      ReactDOM.render(
+        React.createElement(Header),
+        document.getElementById('header')
+      );
+    </script>
+  </body>
+</html>
