@@ -6,13 +6,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Main from './component/Main';
-import Carousel from './component/Carousel';
+import Carousel from './component/carousel/Carousel';
 import Content from './component/Content';
 import Add from './component/Add';
-import A from './component/A';
-import B from './component/B';
-import C from './component/C';
-import D from './component/D';
+import A from './component/page/A';
+import B from './component/page/B';
+import C from './component/page/C';
+import D from './component/page/D';
+import Login from './component/page/Login';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route path="/B" element={<B />} />
         <Route path="/C" element={<C />} />
         <Route path="/D" element={<D />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
@@ -38,9 +40,13 @@ function Home() {
   return (
     <>
       <Carousel />
+      <hr/>
       <Main />
+      <hr/>
       <Content />
+      <hr/>
       <Add />
+      <hr/>
     </>
   );
 }

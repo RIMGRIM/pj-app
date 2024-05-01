@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import A from './A';
-import B from './B';
-import C from './C';
-import D from './D';
 
 
 export default class Main extends Component {
