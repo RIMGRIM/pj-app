@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default class AddMember extends Component {
   render() {
     return (
       <div>
+        <hr/>
         <p style={{ fontSize: '20px', fontWeight: 'bold' }}>新增帳號密碼</p>
         <form name="user" onSubmit={this.test.bind(this)}>
-                帳號:<input type="text" name="username"/><br/>
-                密碼:<input type="password" name="password"/><br/>
-                <input type="submit" value="送出"></input>
+                帳號：<input type="text" name="username"/><br/>
+                密碼：<input type="password" name="password"/><br/>
+                <br/>
+                <input type="submit" value="送出"></input><br/>
+                <br/>
+                <br/>
+        <Link to="/Login" className="btn btn-dark">回到登入頁面</Link>
         </form>
+        <hr/>
       </div>
     )
   }
@@ -25,7 +32,7 @@ export default class AddMember extends Component {
 
         }
 
-        const x=axios.post("http://192.168.8.194:8080/practice/addMember",data,{
+        const x=axios.post("http://192.168.8.194:8080/account/add",data,{
             headers:{
                 'Content-Type':'application/json'
             }
@@ -34,7 +41,7 @@ export default class AddMember extends Component {
         x
         .then(function (response) {
             console.log(response.data);
-            alert("建檔成功");
+            alert("新增成功");
           })
           .catch(function (error) {
             // 檢查error對象的訊息

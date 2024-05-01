@@ -44,7 +44,7 @@ export default class Add extends Component {
         x
         .then(function (response) {
             console.log(response.data);
-            alert("建檔成功");
+            alert("送出成功");
           })
           .catch(function (error) {
             // 檢查error對象的訊息

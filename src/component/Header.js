@@ -7,7 +7,7 @@ export default class Header extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">國際旅遊</a>
+            <Link to="/" className="navbar-brand">國際旅遊</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
               <span className="navbar-toggler-icon"></span>
             </button>

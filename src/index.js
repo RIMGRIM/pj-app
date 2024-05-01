@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Main from './component/Main';
-import Carousel from './component/carousel/Carousel';
+import Carousel from './component/Carousel';
 import Content from './component/Content';
 import Add from './component/Add';
 import A from './component/page/A';
@@ -14,6 +14,7 @@ import B from './component/page/B';
 import C from './component/page/C';
 import D from './component/page/D';
 import Login from './component/page/Login';
+import AddMember from './component/AddMember';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/C" element={<C />} />
         <Route path="/D" element={<D />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/AddMember" element={<AddMember />} />
       </Routes>
       <Footer />
     </Router>
@@ -37,9 +39,18 @@ reportWebVitals();
 
 
 function Home() {
+  const images = [
+    '/pic/J-1.jpg',
+    '/pic/J-2.jpg',
+    '/pic/J-3.jpg',
+    '/pic/E-1.jpg',
+    '/pic/E-2.jpg',
+    '/pic/E-3.jpg',
+  ];
+
   return (
     <>
-      <Carousel />
+      <Carousel images={images} />
       <hr/>
       <Main />
       <hr/>
