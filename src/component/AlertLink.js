@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class AlertLink extends React.Component {
 
@@ -6,25 +6,19 @@ class AlertLink extends React.Component {
         super(props);
     }
 
-  render() {
-    let {id, title, desc} = this.props.linkData;
+    render() {
+        let { id, title, desc } = this.props.linkData;
 
-    let alertClass = "";
+        let alertClass = id % 3 === 0 ? "alert alert-info" :
+            id % 3 === 1 ? "alert alert-dark" :
+                "alert alert-warning";
 
-    if (id % 3 == 0) {
-        alertClass = "alert alert-info";
-    } else if (id % 3 == 1) {
-        alertClass = "alert alert-primary";
-    } else if (id % 3 == 2) {
-        alertClass = "alert alert-success";
-    } 
-
-    return (
-        <>
-      <div key={id} className={alertClass} row="alert">
-        <a href="#" className="alert-link"><strong>{title}</strong></a>{desc}
-      </div>
-        </>
-    )
-  }
+        return (
+            <div key={id} className={alertClass} role="alert">
+                <a href="#" className="alert-link"><strong>{title}</strong></a>{desc}
+            </div>
+        );
+    }
 }
+
+export default AlertLink;
