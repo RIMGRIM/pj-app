@@ -7,10 +7,10 @@ export default class Add extends Component {
       <div>
         <p style={{ fontSize: '20px', fontWeight: 'bold' }}>我想了解更多訊息!</p>
         <form name="user" onSubmit={this.test.bind(this)}>
-                姓名:<input type="text" name="name"/><br/>
-                地址:<input type="text" name="address"/><br/>
-                電話:<input type="text" name="phone"/><br/>
-                目的地:<select name="destination">
+                姓名：<input type="text" name="name"/><br/>
+                地址：<input type="text" name="address"/><br/>
+                電話：<input type="text" name="phone"/><br/>
+                目的地：<select name="destination">
                         <option value="">請選擇</option>
                         <option value="Japan">日本旅遊</option>
                         <option value="Europe">歐洲旅遊</option>
